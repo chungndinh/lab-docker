@@ -7,5 +7,5 @@ RUN mvn package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=MAVEN_BUILD /build/target/dockercompose-springboot-mysql.jar /app/
-ENTRYPOINT ["java", "-jar", "dockercompose-springboot-mysql.jar"]
+COPY --from=MAVEN_BUILD /build/target/dockercompose-springboot-mysql-2.1.7.RELEASE.jar /app/
+ENTRYPOINT ["java", "-jar", "dockercompose-springboot-mysql-2.1.7.RELEASE.jar"]
